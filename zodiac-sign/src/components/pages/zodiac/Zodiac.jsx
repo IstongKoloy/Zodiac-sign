@@ -40,28 +40,19 @@ const Zodiac = () => {
   };
 
   return (
-    // <div className='container card'>
-    //     {data.map((data) => (
-    //     <div key={data.name} className='zodiacs-container'>
-    //       <h2>{data.name}</h2>
-    //       <p>Date: {data.date}</p>
-    //       <button>View more</button>
-    //     </div>
-    //   ))}
-    // </div>
     <div className='card container'>
       {selectedZodiac ? (
-        <div>
+        <div className='curr-zodiac'>
           <h2>{selectedZodiac.name}</h2>
-          <p>Date: {selectedZodiac.date}</p>
-          <p>Personality: {selectedZodiac.personality}</p>
+          <span>{selectedZodiac.date}</span>
+          <p>{selectedZodiac.personality}</p>
           <button className='btn-viewmore' onClick={handleBack}>Back</button>
         </div>
       ) : (
         data.map((data) => (
           <div key={data.name} className='zodiacs-container'>
             <h2>{data.name}</h2>
-            <p>Date: {data.date}</p>
+            <p>{data.date}</p>
             <button className='btn-viewmore' onClick={() => handleViewMore(data)}>View More</button>
           </div>
         ))
