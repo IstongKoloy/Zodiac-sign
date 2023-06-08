@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './zodiac.css'
 import axios from 'axios';
+import Loading from '../../loading/Loading';
 
 const Zodiac = () => {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); //handle loading animation
 
   useEffect( () => {
     fetchData();
@@ -26,6 +28,7 @@ const Zodiac = () => {
         ...response.data[key],
       }));
       setData(data);
+      setIsLoading(true);
     } catch (error) {
       console.error(error);
     }
