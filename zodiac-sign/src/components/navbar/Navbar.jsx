@@ -13,9 +13,9 @@ const Navbar = () => {
             <li className='list-item'>
                 <a href='/' className={currURL === '/' ? 'link active' : 'link'}>Home</a>
             </li>
-            <li className='list-item'>
+            {/* <li className='list-item'>
                 <a href='/zodiac' className={currURL === '/zodiac' ? 'link active' : 'link'}>Zodiacs</a>
-            </li>
+            </li> */}
             {/* <li className='list-item'>
                 <a href='/about' className={currURL === '/about' ? 'link active' : 'link'}>About</a>
             </li>
